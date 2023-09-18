@@ -18,7 +18,7 @@ public class Palindrome {
                       PalindromicOperations palindromicOperations,
                       SubStringingExtractor subStringingExtractor) {
         this.palindromicOperations = palindromicOperations;
-        subStrings = subStringingExtractor.extractSubStrings(inputString);
+        subStrings = subStringingExtractor.extractContiguousSubStrings(inputString);
     }
 
     public String getLongestPalindromicSubString() {

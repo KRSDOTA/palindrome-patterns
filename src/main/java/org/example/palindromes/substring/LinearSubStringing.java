@@ -6,7 +6,7 @@ import java.util.List;
 public class LinearSubStringing implements SubStringingExtractor {
 
     @Override
-    public List<String> extractSubStrings(String inputString) {
+    public List<String> extractContiguousSubStrings(String inputString) {
         final List<String> subStrings = new ArrayList<>();
 
         int windowSize = 1;

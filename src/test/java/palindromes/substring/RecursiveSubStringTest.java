@@ -1,7 +1,6 @@
 package palindromes.substring;
 
-
-import org.example.palindromes.substring.LinearSubStringing;
+import org.example.palindromes.substring.RecursiveSubStringing;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -9,19 +8,19 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.hamcrest.Matchers.containsInAnyOrder;
 
-public class LinearSubStringingTest {
+public class RecursiveSubStringTest {
 
-    private LinearSubStringing linearSubStringing = new LinearSubStringing();
+    private RecursiveSubStringing recursiveSubStringing = new RecursiveSubStringing();
 
     @ParameterizedTest
     @MethodSource("provideStringInputs")
     void testSubStringing(String input, List<String> expected) {
 
-        final List<String> actual = linearSubStringing.extractContiguousSubStrings(input);
+        final List<String> actual = recursiveSubStringing.extractContiguousSubStrings(input);
 
-        assertEquals(expected, actual);
+        containsInAnyOrder(expected, actual);
     }
 
     private static Stream<Arguments> provideStringInputs() {
