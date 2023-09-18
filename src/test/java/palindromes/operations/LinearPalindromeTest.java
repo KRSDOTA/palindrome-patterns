@@ -17,7 +17,8 @@ public class LinearPalindromeTest {
     @ParameterizedTest
     @MethodSource("providePalindromeInputAndExpectedOutputs")
     void correctlyFindLongestPalindromicString(List<String> inputStrings, List<String> expectedPalindromeStrings) {
-        assertEquals(expectedPalindromeStrings, linearPalindrome.filterPalindromicStrings(inputStrings));
+        final List<String> actualOutput = linearPalindrome.filterPalindromicStrings(inputStrings);
+        assertEquals(expectedPalindromeStrings, actualOutput);
     }
 
     private static Stream<Arguments> providePalindromeInputAndExpectedOutputs() {
@@ -28,7 +29,7 @@ public class LinearPalindromeTest {
                 ),
                 Arguments.of(
                         List.of("r", "a", "c", "e", "c", "a", "r", "ra", "ac", "ce", "ec", "ca", "ar", "rac", "ace", "cec", "eca", "car", "race", "acec", "ceca", "ecar", "racec", "aceca", "cecar", "raceca", "acecar", "racecar"),
-                        List.of("racecar, aceca", "cec")
+                        List.of("racecar", "aceca", "cec")
                 )
         );
     }
