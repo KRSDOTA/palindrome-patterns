@@ -26,7 +26,9 @@ public class LinearSubStringingTest {
 
     private static Stream<Arguments> provideStringInputs() {
         return Stream.of(
-                Arguments.of("hello", List.of("h", "e", "l", "l", "o", "he", "el", "ll", "lo", "hel", "ell", "llo", "hell", "ello", "hello"))
+                Arguments.of("hello", List.of("h", "e", "l", "l", "o", "he", "el", "ll", "lo", "hel", "ell", "llo", "hell", "ello", "hello")),
+                Arguments.of("pie", List.of("p", "i", "e", "pi", "ie", "pie")),
+                Arguments.of("racecar", List.of("r", "a", "c", "e", "c", "a", "r", "ra", "ac", "ce", "ec", "ca", "ar", "rac", "ace", "cec", "eca", "car", "race", "acec", "ceca", "ecar", "racec", "aceca", "cecar", "raceca", "acecar", "racecar"))
         );
     }
 
