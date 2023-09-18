@@ -22,6 +22,10 @@ public class LinearPalindrome implements PalindromicOperations {
     }
 
     public boolean isPalindrome(String inputString) {
+        if(inputString.length() == 1) {
+            return false;
+        }
+
         boolean isPalindrome = true;
 
         int startPosition = 0;
