@@ -7,7 +7,7 @@ public class TowerofHanoi {
 
     public TowerofHanoi(int numberOfDisks) {
         this.numberOfDisks = numberOfDisks;
-        numberOfTowers = 2;
+        numberOfTowers = 3;
     }
 
     public int calculateMinimumNumberOfMoves() {
