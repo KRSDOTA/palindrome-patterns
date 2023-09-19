@@ -1,4 +1,4 @@
-package org.example.towerofhanoi;
+package org.krsdota.practise.towerofhanoi;
 
 public class TowerofHanoi {
 

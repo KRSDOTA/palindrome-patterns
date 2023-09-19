@@ -1,12 +1,14 @@
-package org.example.palindromes.operations;
+package org.krsdota.practise.palindromes.operations;
 
 import java.util.List;
 
 public interface PalindromicOperations {
 
     /**
-     * Take a list of Strings, return the palindromes among them
-     * @return List of palindromicStrings in desc order keyed on length
+     * Takes a list of strings, returns a filtered list containing only palindromes
+     *
+     * @param string A List of contiguous strings to test, will extract out any non-palindromes
+     * @return Largest palindromic substring extracted
      */
     List<String> filterPalindromicStrings(List<String> string);
 

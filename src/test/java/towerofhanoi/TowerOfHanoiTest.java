@@ -1,6 +1,6 @@
 package towerofhanoi;
 
-import org.example.towerofhanoi.TowerofHanoi;
+import org.krsdota.practise.towerofhanoi.TowerofHanoi;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -29,5 +29,4 @@ public class TowerOfHanoiTest {
                 Arguments.of(4, 15)
         );
     }
-
 }

@@ -1,6 +1,6 @@
 package palindromes.operations;
 
-import org.example.palindromes.operations.LinearPalindrome;
+import org.krsdota.practise.palindromes.operations.StreamFilterOperation;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -10,14 +10,14 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class LinearPalindromeTest {
+public class StreamFilterOperationTest {
 
-    private LinearPalindrome linearPalindrome = new LinearPalindrome();
+    private StreamFilterOperation streamFilterOperation = new StreamFilterOperation();
 
     @ParameterizedTest
     @MethodSource("providePalindromeInputAndExpectedOutputs")
     void correctlyFindLongestPalindromicString(List<String> inputStrings, List<String> expectedPalindromeStrings) {
-        final List<String> actualOutput = linearPalindrome.filterPalindromicStrings(inputStrings);
+        final List<String> actualOutput = streamFilterOperation.filterPalindromicStrings(inputStrings);
         assertEquals(expectedPalindromeStrings, actualOutput);
     }
 

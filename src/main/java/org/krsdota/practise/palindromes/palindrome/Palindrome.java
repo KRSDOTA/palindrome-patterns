@@ -1,7 +1,7 @@
-package org.example.palindromes;
+package org.krsdota.practise.palindromes.palindrome;
 
-import org.example.palindromes.operations.PalindromicOperations;
-import org.example.palindromes.substring.SubStringingExtractor;
+import org.krsdota.practise.palindromes.operations.PalindromicOperations;
+import org.krsdota.practise.palindromes.substring.SubStringingExtractor;
 
 import java.util.ArrayList;
 import java.util.List;

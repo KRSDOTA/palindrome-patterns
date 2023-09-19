@@ -1,4 +1,4 @@
-package org.example.palindromes.substring;
+package org.krsdota.practise.palindromes.substring;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,17 +1,14 @@
-package org.example.palindromes.operations;
+package org.krsdota.practise.palindromes.operations;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class LinearPalindrome implements PalindromicOperations {
+/**
+ * Use the "Stream" toolkit/lib to perform filtering
+ */
+public class StreamFilterOperation implements PalindromicOperations {
 
-    /**
-     * Takes a list of strings, returns a filtered list containing only palindromes
-     *
-     * @param subStrings A List of strings to test, will extract out any non-palindromes
-     * @return Largest palindromic substring extracted
-     */
     @Override
     public List<String> filterPalindromicStrings(List<String> subStrings) {
         final List<String> palindromeSubStrings = new ArrayList<>(subStrings.stream().filter(this::isPalindrome).toList());
