@@ -7,17 +7,21 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class TowerOfHanoiTest {
 
     private TowerofHanoi towerofHanoi;
 
     @ParameterizedTest
     @MethodSource("expectedOutputMovesGivenDisks")
-    void testExpectedMinimumNumberOfMoves(int numberOfDisks, int expectedMinimumNumberOfMoves) {
-        towerofHanoi = new TowerofHanoi(2);
+    void testExpectedMinimumNumberOfMoves(Integer numberOfDisks, Integer expectedMinimumNumberOfMoves) {
+        towerofHanoi = new TowerofHanoi(numberOfDisks);
+
+        assertEquals(expectedMinimumNumberOfMoves, towerofHanoi.calculateMinimumNumberOfMoves());
     }
 
-    private Stream<Arguments> expectedOutputMovesGivenDisks() {
+    private static Stream<Arguments> expectedOutputMovesGivenDisks() {
         return Stream.of(
                 Arguments.of(1, 1),
                 Arguments.of(2, 3),
@@ -25,7 +29,5 @@ public class TowerOfHanoiTest {
                 Arguments.of(4, 15)
         );
     }
-
-
 
 }
