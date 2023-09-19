@@ -5,6 +5,9 @@ import java.util.List;
 
 public class LinearSubStringing implements SubStringingExtractor {
 
+    /**
+     * Less easy to read, more efficient
+     */
     @Override
     public List<String> extractContiguousSubStrings(String inputString) {
         final List<String> subStrings = new ArrayList<>();

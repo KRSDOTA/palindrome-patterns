@@ -16,13 +16,16 @@ public class RecursiveSubStringing implements SubStringingExtractor {
         return List.copyOf(Set.copyOf(breakdownString(inputString)));
     }
 
+    /**
+     * Easier to read, less efficient
+     */
     private List<String> breakdownString(String inputString) {
         final List<String> subStrings = new ArrayList<>();
 
         for(int i = 1; i <= inputString.length(); i++) {
             final String extractedString = inputString.substring(0, i);
             subStrings.add(extractedString);
-            subStrings.addAll(extractContiguousSubStrings(inputString.substring(i)));
+            subStrings.addAll(breakdownString(inputString.substring(i)));
         }
 
         return subStrings;
