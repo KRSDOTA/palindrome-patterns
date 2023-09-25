@@ -48,7 +48,7 @@ public class TowerofHanoi {
 
     }
 
-    public void visualiseJourneyOfDisks(int n, char fromRod, char toRod, char auxRod){
+    public void visualiseJourneyOfDisks(int n, char fromRod, char toRod, char auxRod) {
         if(n == 1) {
             System.out.println(String.format("Move disk 1 from rod %c to rod %c", fromRod, toRod));
             return;
@@ -57,5 +57,4 @@ public class TowerofHanoi {
         System.out.println(String.format("Move disk %d from rod %c to rod %c", n, fromRod, toRod));
         visualiseJourneyOfDisks(n - 1, auxRod, toRod, fromRod);
     }
-
 }
