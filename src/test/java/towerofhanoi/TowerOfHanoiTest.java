@@ -15,7 +15,7 @@ public class TowerOfHanoiTest {
 
     @ParameterizedTest
     @MethodSource("expectedOutputMovesGivenDisks")
-    void testExpectedMinimumNumberOfMoves(Integer numberOfDisks, Integer expectedMinimumNumberOfMoves) {
+    void testExpectedMinimumNumberOfMoves(Integer numberOfDisks, Long expectedMinimumNumberOfMoves) {
         towerofHanoi = new TowerofHanoi(numberOfDisks);
 
         assertEquals(expectedMinimumNumberOfMoves, towerofHanoi.calculateMinimumNumberOfMoves());
@@ -23,10 +23,10 @@ public class TowerOfHanoiTest {
 
     private static Stream<Arguments> expectedOutputMovesGivenDisks() {
         return Stream.of(
-                Arguments.of(1, 1),
-                Arguments.of(2, 3),
-                Arguments.of(3, 7),
-                Arguments.of(4, 15)
+                Arguments.of(1, 1L),
+                Arguments.of(2, 3L),
+                Arguments.of(3, 7L),
+                Arguments.of(4, 15L)
         );
     }
 }
