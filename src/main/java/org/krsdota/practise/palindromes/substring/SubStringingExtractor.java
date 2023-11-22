@@ -10,6 +10,6 @@ public interface SubStringingExtractor {
      * @param inputString input string
      * @return constituent sub-strings
      */
-    public List<String> extractContiguousSubStrings(String inputString);
+    List<String> extractContiguousSubStrings(String inputString);
 
 }

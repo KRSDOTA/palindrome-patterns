@@ -38,5 +38,5 @@ public class PalindromePatternApp {
             System.out.println(String.format("\n\r getLongestSubString: %s  \n\r", palindrome.getLongestPalindromicSubString()));
             System.out.println(String.format("\n\r getPalindromicStrings: %s  \n\r", palindrome.getPalindromicStrings()));
         });
-    }
+    }  
 }
