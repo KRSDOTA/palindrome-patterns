@@ -1,11 +1,11 @@
 package org.krsdota.practise.banking.accounts;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class NormalAccountManager implements AccountManager {
 
-    private List<Account> accounts = new ArrayList<>();
+    private Set<Account> accounts = new HashSet<>();
 
     @Override
     public void open(double openingBalance, AccountType accountType) {
@@ -14,11 +14,25 @@ public class NormalAccountManager implements AccountManager {
 
     @Override
     public double close(Account account) {
-        return 0;
+        final Account accountToClose = accounts.stream().filter(
+                a -> a.equals(account)
+        )
+        .findFirst()
+        .orElseThrow(
+            () -> new IllegalArgumentException("can't find requested account to close")
+        );
+
+        final double fullContentsOfAccount = account.withdrawAllFunds();
+        accounts.remove(accountToClose);
+        return fullContentsOfAccount;
     }
 
+    /**
+     * Get the set of accounts under management
+     * @return actively managed accounts
+     */
     @Override
-    public List<Account> getAccounts() {
-        return null;
+    public Set<Account> getAccounts() {
+        return accounts;
     }
 }

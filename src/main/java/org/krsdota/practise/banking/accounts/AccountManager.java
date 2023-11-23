@@ -1,7 +1,7 @@
 package org.krsdota.practise.banking.accounts;
 
 
-import java.util.List;
+import java.util.Set;
 
 /**
  * Simple class responsible for holding user accounts and managing requests to accounts on  behalf of a customer
@@ -24,9 +24,10 @@ public interface AccountManager {
     double close(Account account);
 
     /**
-     * Get all teh current accounts for a user
+     * Get all the current accounts for a user
+     *
      * @return all accounts user holds
      */
-    List<Account> getAccounts();
+    Set<Account> getAccounts();
 
 }

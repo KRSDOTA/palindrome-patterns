@@ -9,12 +9,17 @@ public class CurrentAccount implements Account {
     }
 
     @Override
-    public void addFunds() {
+    public void addFunds(double amountToAdd) {
 
     }
 
     @Override
-    public double withdrawFunds() {
+    public double withdrawFunds(double amountToWithdraw) {
+        return 0;
+    }
+
+    @Override
+    public double withdrawAllFunds() {
         return 0;
     }
 
