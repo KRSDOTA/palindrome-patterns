@@ -27,4 +27,9 @@ public class CurrentAccount implements Account {
     public void applyCompoundingInterest() {
 
     }
+
+    @Override
+    public double checkBalance() {
+        return 0;
+    }
 }

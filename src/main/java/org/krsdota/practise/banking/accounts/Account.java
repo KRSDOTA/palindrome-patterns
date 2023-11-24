@@ -28,4 +28,10 @@ public interface Account {
      */
     void applyCompoundingInterest();
 
+    /**
+     * Check the balance of the account
+     * @return the amount in the account
+     */
+    double checkBalance();
+
 }
