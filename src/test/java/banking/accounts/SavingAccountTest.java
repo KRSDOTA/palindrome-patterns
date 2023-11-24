@@ -8,6 +8,33 @@ public class SavingAccountTest {
     private SavingAccount savingAccount;
 
     @Test
-    void
+    void shouldCorrectlyAddFunds() {
+
+    }
+
+    @Test
+    void shouldCorrectlyWithdrawFunds() {
+
+    }
+
+    @Test
+    void shouldNotAllowNegativeValueSpecifiedForWithdrawal() {
+
+    }
+
+    @Test
+    void shouldWithdrawAllFunds() {
+
+    }
+
+    @Test
+    void shouldApplyCompoundingInterest() {
+
+    }
+
+    @Test
+    void shouldCheckBalance() {
+
+    }
 
 }
