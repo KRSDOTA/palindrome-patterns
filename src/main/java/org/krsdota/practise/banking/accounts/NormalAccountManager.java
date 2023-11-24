@@ -1,9 +1,14 @@
 package org.krsdota.practise.banking.accounts;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.HashSet;
 import java.util.Set;
 
 public class NormalAccountManager implements AccountManager {
+
+    final Logger logger = LoggerFactory.getLogger(NormalAccountManager.class);
 
     private Set<Account> accounts = new HashSet<>();
 
